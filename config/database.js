@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
-mongoose.connect('mongodb+srv://Priuyanshu:Priyanshu@cluster0.ufwtd.mongodb.net/EcoomerceaApi');
+require('dotenv').config()
+mongoose.connect(process.env.DATABASE);
 
 
 const db = mongoose.connection;

@@ -1,8 +1,11 @@
 const express = require("express");
 const app = express();
-const port = 5000;
+
 const db = require("./config//database.js");
+require('dotenv').config()
 const {createProduct, getAllProducts} = require('./controllers/productController'); 
+
+const port = process.env.PORT || 5000;
 
 
 app.use(express.json());
